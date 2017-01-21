@@ -1,0 +1,14 @@
+<md-card>
+    <md-card-header>      
+      <md-card-title>Welcome to Magic  Poll</md-card-title>
+      <md-card-subtitle>Open or create a new poll</md-card-subtitle>
+   </md-card-header>
+   <md-card-content class="name-container">
+      <md-input [(ngModel)]="pollName" placeholder="enter poll name"> </md-input>
+      <button (click)="openPoll()" md-button color="primary">Open</button>
+   </md-card-content>    
+
+    <div>
+        <button (click)="newPoll()" md-raised-button color="primary">New Poll</button>
+    </div>
+</md-card>

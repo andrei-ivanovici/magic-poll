@@ -1,0 +1,12 @@
+<md-card class="my-card">
+    <md-card-header>
+        <md-card-title> {{currentPoll?.name}}</md-card-title>
+        <md-card-subtitle>{{currentPoll?.description}}</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+        <div *ngFor="let option of currentPoll?.options" class="item">
+            <label>{{option.description}}</label>
+            <button (click)="vote(option)" md-button color="primary">vote</button>
+        </div>
+    </md-card-content>
+</md-card>

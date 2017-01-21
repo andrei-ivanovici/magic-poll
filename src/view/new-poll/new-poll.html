@@ -1,0 +1,19 @@
+<md-card>
+    <div style="display: flex;flex-direction: column">
+        <md-input [(ngModel)]="poll.name" placeholder="name"> </md-input>
+        <md-input [(ngModel)]="poll.description" placeholder="question"> </md-input>
+    </div>
+
+    <div *ngFor="let option of poll.options" class="answer">    
+        <md-input [(ngModel)]="option.description" placeholder="answer"> </md-input>
+        <button (click)="deleteOption(option)" md-button color="primary">delete</button>    
+    </div>
+    
+    <button (click)="addOption()" md-button color="primary">
+        add answer
+    </button>
+        
+    <md-card-actions>
+        <button (click)="save()" md-button color="primary">save </button>
+    </md-card-actions>
+</md-card>
